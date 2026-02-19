@@ -55,24 +55,6 @@ Faculty-Finder/
 ├── main.py                 # Alternative entry point
 └── faculty_search.db       # SQLite database file
 ```
-
-## Schema
-```
-def create_tables(conn):
-    create_faculty_table = """
-    CREATE TABLE IF NOT EXISTS faculty (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        department TEXT,
-        bio TEXT,
-        research_interests TEXT,
-        education TEXT,
-        bio_text_clean TEXT,
-        profile_url TEXT UNIQUE,
-        image_url TEXT
-    );
-    """
-```
 ## Installation
 
 ### Prerequisites
@@ -131,9 +113,9 @@ You can also run the application using Docker.
 
 2.  **Run the container:**
     ```bash
-    docker run -p 10000:10000 faculty-finder
+    docker run -p 8000:8000 faculty-finder
     ```
-    The application will be accessible at `http://localhost:10000`.
+    The application will be accessible at `http://localhost:8000`.
 
 
 ## API Endpoints
