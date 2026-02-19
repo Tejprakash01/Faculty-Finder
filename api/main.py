@@ -21,7 +21,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+    
 # Global engine instance
 search_engine = None
 
